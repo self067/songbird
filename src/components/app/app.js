@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import Header from '../header';
-import List from '../list';
-import Player from '../player';
-import Selector from '../selector';
+import Categories from '../categories';
+import Questcard from '../questcard';
+import Variants from '../variants';
 import Infocard from '../infocard';
 import Footer from '../footer';
 import './app.css';
@@ -20,10 +20,10 @@ export default class App extends Component {
     return (
       <div className="container">
         <Header />
-        <List />
-        <Player />
-        <Selector />
-        <Infocard />
+        <Categories />
+        <Questcard />
+        <Variants />
+        {/* <Infocard /> */}
         <Footer />
       </div>
     );

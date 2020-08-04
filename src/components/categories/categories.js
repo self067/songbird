@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './list.css';
+import './categories.css';
 
-const List = () => {
+const Categories = () => {
   return (
     <ul className="sb-list pagination" >
       <li className="page-item active">
@@ -27,4 +27,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default Categories;

@@ -7,7 +7,6 @@ const SAMPLE_MP3_URL='http://songbird.lmaa.ru/gavrilina.mp3';
 export default class Player extends PureComponent {
 
   render() {
-    
     const Player = () => (
       <AudioPlayer
         autoPlay={false}
@@ -35,15 +34,7 @@ export default class Player extends PureComponent {
     );
 
     return (
-      <div className="random-bird">
-        <img src="images/dark-bird.jpg" width="200" height="155" alt="" className="bird-image"/>
-        <div className="group-ctrls">
-          <h3 className="hidden-name">******</h3>
-
-        <Player />
-
-        </div>
-      </div>
+      <Player />
 );
   }
 }

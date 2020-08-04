@@ -1,4 +1,4 @@
-.btn-next {
+.btn-def {
   width: 100%;
   margin: 25px auto;
   background-color: #303030;
@@ -6,4 +6,12 @@
   color: #fff!important;
   cursor: auto;
   transition: .3s;
+}
+.btn-next {
+  background-color: #00bc8c;
+  cursor: pointer;  
+}
+
+.btn-next:hover {
+  background-color: #00EFB2;
 }
