@@ -1,0 +1,112 @@
+* {
+  outline: none !important;
+}
+
+.random-bird {
+  display: flex;
+  margin-bottom: 25px;
+  padding: 16px 60px 16px 25px;
+  background-color: #303030;
+  color: #303030;
+  border-radius: 10px;
+}
+
+/* .bird-image {
+  border-radius: 10px;
+} */
+
+.group-ctrls {
+  margin-left: 40px;
+  flex: 1;
+}
+
+.hidden-name {
+  color: #fff;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+.rhap_time {
+  color: #fff;
+  font-size: 11px;
+}
+.rhap_volume-controls {
+  justify-content: center;
+}
+.rhap_volume-container {
+  margin-top: 10px;
+}
+
+/* .rhap_volume-container {
+} */
+
+.rhap_controls-section {
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 0 !important;
+  margin-left: 60px;
+}
+
+
+.rhap_container {
+  background-color: #303030;
+  color: #fff;
+  border-top: 1px solid #555;
+  padding: 12px 0;
+  box-shadow: none;
+}
+
+.rhap_play-pause-button {
+  color:  #303030;
+  border-radius: 50%;
+  /* border: 2px solid rgb(0, 188, 140); */
+  background-color: rgb(0, 188, 140);
+  font-size: 44px;
+}
+
+.rhap_play-pause-button svg {
+  color:  #303030;
+  border-radius: 50%;
+  width: 0.9em;
+  height: 0.9em;
+}
+
+.rhap_button-clear {
+  
+}
+
+div.rhap_container svg {
+  
+}
+
+
+
+div.rhap_progress-container {
+  margin: 0 0 0 15px;
+}
+
+div.rhap_progress-filled, div.rhap_volume-bar {
+  background: linear-gradient(to right, rgb(0, 188, 140) 0%, rgb(61, 133, 140) 100%, rgb(115, 115, 115) 100%, rgb(115, 115, 115) 100%);
+}
+
+
+@media screen and (max-width: 991px) {
+  .bird-image {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .random-bird {
+    flex-direction: column;
+  }
+  .group-ctrls {
+    margin-left: 0px;
+  }
+} 
+
+@media screen and (max-width: 479px) {
+
+}

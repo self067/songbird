@@ -1,24 +1,16 @@
 import React from 'react';
-
 import './header.css';
+import logo from './logo.svg';
 
 const Header = () => {
   return (
-    <div className="header d-flex">
-      <h3>
-        AnimalsSound
-      </h3>
-      <ul className="d-flex">
-        <li>
-          People
-        </li>
-      </ul>
-
-      <button
-          className="btn btn-primary btn-sm">
-        Change Service
-      </button>
+    <div className="header-top-panel">
+      <img src={logo} width="200" height="55" alt="" className="logo"/>
+      <h5 className="header-score">
+        Score: <span className="span">0</span>
+      </h5>
     </div>
+
   );
 };
 

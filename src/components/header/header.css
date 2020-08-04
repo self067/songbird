@@ -1,0 +1,21 @@
+.header-top-panel {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-score {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+@media (max-width: 575px) { 
+  .header-top-panel img {
+    width: 50%;
+  }
+}
+
+
