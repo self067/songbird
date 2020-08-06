@@ -1,6 +1,6 @@
 .item-list {
-  height: 100%;
-  margin-bottom: 0px;
+  /* height: 100%; */
+  margin-bottom: 20px;
   padding-right: 0px;
   padding-left: 0px;
   flex-direction: column;
@@ -135,6 +135,9 @@
   .animal-details  .animal-image {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 10px;
+    width: 160px;
+    height: 124px;
   }
 
 }

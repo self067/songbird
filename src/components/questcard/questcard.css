@@ -17,6 +17,7 @@
 }
 
 .hidden-name {
+  margin-top: 10px;
   color: #fff;
   font-size: 32px;
   line-height: 38px;
@@ -34,6 +35,7 @@
 @media screen and (max-width: 767px) {
   .random-animal {
     flex-direction: column;
+    padding: 20px;
   }
   .group-ctrls {
     margin-left: 0px;
@@ -41,5 +43,12 @@
 } 
 
 @media screen and (max-width: 570px) {
+
+.random-animal .animal-image {
+
+  margin-bottom: 10px;
+  width: 160px;
+  height: 124px;
+}
 
 }
