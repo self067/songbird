@@ -5,14 +5,15 @@ import './questcard.css';
 
 export default class Questcard extends PureComponent {
   render() {
+    const { mp3src, title } = this.props;
     return (
       <div className="random-animal">
-        <img src="images/dark-bird.jpg" width="200" height="155" alt="" className="animal-image"/>
+        <img src="images/siluet.jpg" width="200" height="155" alt="" className="animal-image"/>
         <div className="group-ctrls">
           <h3 className="hidden-name">
-            ******
+            {title}
           </h3>
-          <Player />
+          <Player mp3src={mp3src}/>
         </div>
       </div>
 );

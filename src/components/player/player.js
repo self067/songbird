@@ -3,14 +3,18 @@ import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import './player.css';
 
-const SAMPLE_MP3_URL='http://songbird.lmaa.ru/gavrilina.mp3';
 export default class Player extends PureComponent {
+  // constructor(props){
+  //   super(props);
+
+  // }
 
   render() {
+    const { mp3src } = this.props;
     const Player = () => (
       <AudioPlayer
         autoPlay={false}
-        src={SAMPLE_MP3_URL}
+        src={mp3src}
         onPlay={e => console.log("onPlay")}
         showJumpControls={false} 
         // customAdditionalControls={[]}

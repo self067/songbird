@@ -1,28 +1,22 @@
 import React from 'react';
-
+import CategoryItem from '../categoryItem';
 import './categories.css';
 
-const Categories = () => {
+const Categories = ({ categories }) => {
+  const elements = categories.map((item) => {
+    const { gid, ...itemProps } = item;
+    // console.log(itemProps);
+    return (
+      <CategoryItem
+        key={gid}
+        {...itemProps}
+      />
+    );
+  });
+
   return (
-    <ul className="sb-list pagination" >
-      <li className="page-item active">
-        <a href="#" className="page-link"> Разминка </a> 
-      </li>
-      <li className="page-item">
-        <a href="#" className="page-link"> Воробьиные </a>
-      </li>
-      <li className="page-item">
-        <a href="#" className="page-link">Лесные птицы</a>
-      </li>
-      <li className="page-item">
-        <a href="#" className="page-link"> Певчие птицы </a>
-      </li>
-      <li className="page-item">
-        <a href="#" className="page-link">Хищные птицы</a>
-      </li>
-      <li className="page-item">
-        <a href="#" className="page-link"> Морские птицы </a>
-      </li>
+    <ul className="sb-list pagination">
+      {elements}
     </ul>
   );
 };

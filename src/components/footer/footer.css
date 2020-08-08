@@ -9,7 +9,7 @@
 }
 .btn-next {
   background-color: #00bc8c;
-  cursor: pointer;  
+  /* cursor: pointer;   */
 }
 
 .btn-next:hover {

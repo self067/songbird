@@ -5,12 +5,15 @@ import Player from '../player';
 export default class Variants extends PureComponent {
 
   render() {
-
+    // const { mp3src, onSelectAnswer } = this.props;
+    // onSelectAnswer={onSelectAnswer}>
+    const { mp3src } = this.props;
     return (
       <div className="row mb2">
         <div className="col-md-4">
           <ul className="item-list list-group">
-            <li className="list-group-item">
+            <li className="list-group-item"
+        >
               <span className="li-btn" />
               Зяблик
             </li>
@@ -53,7 +56,7 @@ export default class Variants extends PureComponent {
                   <span>Parus major</span>
                 </li>
                 <li className="list-group-item">
-                  <Player />
+                  <Player mp3src={mp3src}/>
 
                 </li>
               </ul>
