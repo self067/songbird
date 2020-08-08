@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../header';
 import Categories from '../categories';
 import Questcard from '../questcard';
-// import ChoicesMain from '../choicesMain';
 import ChoicesList from '../choicesList';
 import ChoiceDetail from '../choiceDetail';
 
