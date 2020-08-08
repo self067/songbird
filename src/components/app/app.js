@@ -1,10 +1,9 @@
-
 import React, { Component } from 'react';
 import Header from '../header';
 import Categories from '../categories';
 import Questcard from '../questcard';
-import Variants from '../variants';
-// import Infocard from '../infocard';
+import ChoicesMain from '../choicesMain';
+
 import Footer from '../footer';
 import './app.css';
 import AnimalData from '../../services/animalData';
@@ -59,7 +58,7 @@ export default class App extends Component {
         <Header score={score} />
         <Categories categories={categories}/>
         <Questcard mp3src={mp3src} title={rightAnimal}/>
-        <Variants  mp3src={mp3src} onSelectAnswer={this.onSelectAnswer}/>
+        <ChoicesMain mp3src={mp3src} onSelectAnswer={this.onSelectAnswer}/>
         <Footer nextActive={nextActive} onClickNextLevel={this.onClickNextLevel}/>
       </div>
     );
