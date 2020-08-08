@@ -14,14 +14,14 @@
 
 /************************/
 .instruction {
-  display: none;
+  display: flex;
 }
 
 .animal-description {
   display: flex;
 }
 .card-body {
-  display: flex;
+  display: none;
 }
 
 

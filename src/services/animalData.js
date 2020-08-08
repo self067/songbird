@@ -4,6 +4,7 @@ export default class AnimalData {
 
   async getResource(url) {
     const res = await fetch(`${this._apiBase}${url}`, { mode: 'no-cors' });
+
     if (!res.ok) {
       throw new Error(`Could not fetch ${url} status=${res.status}`);
     }
