@@ -4,8 +4,10 @@ import './choicesList.css';
 const ChoicesList = ({
   choices, onClickChoice
 }) => {
-  const elements = choices.animals.map((item) => {
+
+  const elements = choices.map((item) => {
     const { id, error, success, name } = item;
+
     let classNames = 'list-group-item';
     if (error) classNames += ' error';
     if (success) classNames += ' success';

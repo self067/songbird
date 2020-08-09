@@ -1,11 +1,11 @@
 .btn-def {
   width: 100%;
-  margin: 25px auto;
+  margin: 1px auto;
   background-color: #303030;
   border: 1px solid #444;
-  color: #fff!important;
-  cursor: auto;
-  transition: .3s;
+  /* color: #fff!important; */
+  /* cursor: auto; */
+  transition: .5s;
 }
 .btn-next {
   background-color: #00bc8c;

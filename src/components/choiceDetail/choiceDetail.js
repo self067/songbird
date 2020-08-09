@@ -5,8 +5,8 @@ import Player from '../player';
 // const ChoiceDetail = ({id, name, species, description, image, audio }) => {
 
 const ChoiceDetail = ({currentDetail}) => {
-  const {id, name, species, description, image, audio} = currentDetail;
-console.log('cdetail ',id, name, species, description, image, audio);
+  const { name, species, description, image, audio} = currentDetail;
+// console.log('cdetail ',id, name, species, description, image, audio);
   return (
     <div className="animal-details card">
       <p className="instruction">
