@@ -13,17 +13,10 @@
 } 
 
 /************************/
-.instruction {
-  display: flex;
-}
 
 .animal-description {
   display: flex;
 }
-.card-body {
-  display: none;
-}
-
 
 .animal-details {
   display: flex;
@@ -49,12 +42,17 @@
   margin-right: .5rem;
 }
 
+.instruction {
+  display: block;
+}
+
 .card-body {
   display: flex;
   padding: 0;
   flex-direction: row;
   min-height: 173px;
 }
+.card { min-height: 173px;}
 
 .card-body .list-group {
   width: calc(100% - 240px);

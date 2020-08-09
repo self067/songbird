@@ -32,6 +32,7 @@ const App = () => {
 
   const [categories, setCategories] = useState([]);
   const [animals, setAnimals] = useState([]);
+  const [isShow, setIsShow] = useState(true);
 
   const [mp3src, setMp3src] = useState('https://self067-songbird.lmaa.ru/g1.mp3');
 
@@ -43,10 +44,10 @@ const App = () => {
   };
 
   const onNextLevel = () => {
-    console.log('nextLevel');
     setNextActive(false);
-
-    setRightChoiceId( animals[currentGroup+1].animals[rightChoice].id);
+    setIsShow(true);
+    setRightChoiceId(animals[currentGroup+1].animals[rightChoice].id);
+    //
     console.log(animals[currentGroup+1].animals[rightChoice].name);
     setCurrentList( animals[currentGroup+1].animals.map((item) => {
       const { id, name } = item;
@@ -54,7 +55,14 @@ const App = () => {
     }));
 
 
-    setCurrentGroup(currentGroup+1);
+    const newGroup = currentGroup+1;
+    setCategories(animals.map((item, i) => {
+      const active = newGroup === i ;
+      const { groupName, gid } = item;
+      return { active, groupName, gid };
+    }));
+
+    setCurrentGroup(newGroup);
 
     setRightChoice(getNextRandom());
     setRemain(5);
@@ -85,7 +93,7 @@ const App = () => {
   const onClickChoice = (id) => {
     const de = getCurrentDetail(id);
     setCurrentDetail(de);
-
+    setIsShow(false);
     if (id === rightChoiceId) {
       if (!getProperty(currentList, id, 'success')) {
         // if( currentList)
@@ -98,7 +106,7 @@ const App = () => {
         setAnimalTitle(animals[currentGroup].animals[rightChoice].name);
       }
     } else
-    if (!getProperty(currentList, id, 'error')) {
+    if (!getProperty(currentList, id, 'error') && !nextActive) {
       // if( currentList)
       setCurrentList(toggleProperty(currentList, id, 'error'));
       // музыка
@@ -113,14 +121,15 @@ const App = () => {
     fetch(`${apiBase}${url}`, { mode: 'no-cors' })
       .then(response => response.json())
       .then(data => {
-        // console.log('data', data);
+
         setAnimals(data);
         setCategories(data.map((item, i) => {
           const active = !i;
           const { groupName, gid } = item;
           return { active, groupName, gid };
         }));
-
+//??????
+console.log(rightChoice, data[0].animals[rightChoice], data[0].animals[rightChoice].id)
         setRightChoiceId( data[0].animals[rightChoice].id);
         console.log(data[0].animals[rightChoice].name);
         setCurrentList( data[0].animals.map((item, i) => {
@@ -140,7 +149,9 @@ const App = () => {
   if (isDataLoaded) {
 
     // console.log('currentGroup', currentGroup, 'currentList', currentList, rightChoiceId);
-
+    let messNext = 'Next Level';
+    if (currentGroup > 4) messNext = 'See Results';
+    console.log(isShow);
     return (
       <div className="container">
         <Header score={score} />
@@ -154,11 +165,10 @@ const App = () => {
             />
           </div>
           <div className="col-md-8">
-            <ChoiceDetail currentDetail={currentDetail} />
+            <ChoiceDetail currentDetail={currentDetail} isShow={isShow}/>
           </div>
         </div>
-        {/* <ChoicesMain choices={ag} onClickChoice={onClickChoice} choiceDetail={choiceDetal}/> */}
-        <Footer nextActive={nextActive} onNextLevel={onNextLevel}/>
+        <Footer nextActive={nextActive} onNextLevel={onNextLevel} messNext={messNext}/>
       </div>
     );
   }
