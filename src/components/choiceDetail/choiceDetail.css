@@ -63,9 +63,9 @@
 }
 
 @media (max-width: 992px) {
-  .card-body {
+  /* .card-body {
     flex-direction: column;
-  }
+  } */
   .bird-details .bird-image {
     display: block;
     margin: 0 auto 25px;
@@ -80,12 +80,13 @@
     /* display: block; */
     margin-top: 40px;    
   }
-  .card-body {
+  /* .card-body {
     flex-direction: row;
-  }
+  } */
   .bird-details .bird-image {
     margin-right: 2rem;
   }
+
 }
 
 @media (max-width: 570px) {  
@@ -93,6 +94,10 @@
     flex-direction: column;
   }
   
+     /* .card-body {
+    flex-direction: row;
+  } */
+
   .bird-details .bird-image {
     margin: 0 auto 25px;
   }

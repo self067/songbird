@@ -10,12 +10,12 @@ export default class Player extends PureComponent {
   // }
 
   render() {
-    const { mp3src } = this.props;
+    const { mp3src, playerStop } = this.props;
     const Player = () => (
       <AudioPlayer
         autoPlay={false}
         src={mp3src}
-        onPlay={e => console.log("onPlay")}
+        // onPlay={e => console.log("onPlay")}
         showJumpControls={false} 
         // customAdditionalControls={[]}
         // layout="horizontal-reverse"

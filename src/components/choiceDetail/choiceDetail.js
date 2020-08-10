@@ -3,9 +3,12 @@ import './choiceDetail.css';
 import Player from '../player';
 
 // const ChoiceDetail = ({id, name, species, description, image, audio }) => {
+const imgPrefix = 'images/quest/';
+const audioPrefix = 'audio/quest/';
 
 const ChoiceDetail = ({currentDetail, isShow}) => {
   const { name, species, description, image, audio } = currentDetail;
+  const playerStop = true;
   return (
     <div className="animal-details card">
       { isShow
@@ -16,8 +19,9 @@ const ChoiceDetail = ({currentDetail, isShow}) => {
             <span>Выберите животное из списка</span>
           </div>
         ) : (
+          <div>
           <div className="card-body">
-            <img className="animal-image" src={image} alt={name}/>
+            <img className="animal-image" src={imgPrefix+image} alt={name}/>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
                 <h4>{name}</h4>
@@ -26,11 +30,13 @@ const ChoiceDetail = ({currentDetail, isShow}) => {
                 <span>{species}</span>
               </li>
               <li className="list-group-item">
-                <Player mp3src={audio}/>
+                <Player mp3src={audioPrefix+audio} playerStop={playerStop}/>
               </li>
             </ul>
-            <span className="animal-description">{description}</span>
           </div>
+                      <span className="animal-description">{description}</span>
+                      </div>
+
         )
       }
     </div>

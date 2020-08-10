@@ -1,0 +1,97 @@
+.btn-def {
+  width: 100%;
+  margin: 5px auto;
+  background-color: #303030;
+  border: 1px solid #444;
+  /* color: #fff!important; */
+  /* cursor: auto; */
+  transition: .5s;
+}
+.btn-next {
+  background-color: #00bc8c;
+}
+
+.btn-next:hover {
+  background-color: #00EFB2;
+}
+
+
+.section_congratulation {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: #444;
+  background-image: url("fire.gif");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text_congratulation {
+  /* margin-bottom: 10%; */
+  /* margin-top: 20px; */
+  color: #8af0aa;
+  font-size: 50px;
+  line-height: 1.3em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.text-block-2 {
+  padding: 15px;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.gra_button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 60px;
+  background-color: #50bc8b;
+  color: #fff;
+  transition: color 500ms ease, background-color 500ms ease;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.gra_button:hover {
+  background-color: #8af0aa;
+  color: #222;
+}
+
+.score_text_span {
+  color: #8af0aa;
+  font-size: 50px;
+}
+
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 767px) {  
+}
+
+@media (max-width: 570px) {  
+  .text_congratulation {
+    font-size: 24px;
+  }
+  .text-block-2 {
+    font-size: 18px;
+  }
+
+  .score_text_span {
+    font-size: 24px;
+  }
+  .gra_button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}
+
