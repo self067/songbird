@@ -4,13 +4,9 @@ import 'react-h5-audio-player/lib/styles.css';
 import './player.css';
 
 export default class Player extends PureComponent {
-  // constructor(props){
-  //   super(props);
-
-  // }
 
   render() {
-    const { mp3src, playerStop } = this.props;
+    const { mp3src } = this.props;
     const Player = () => (
       <AudioPlayer
         autoPlay={false}

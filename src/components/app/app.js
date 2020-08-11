@@ -25,15 +25,18 @@ const playSound = (sound: string) => {
   audio.play();
 };
 
+
+
+
 const App = () => {
-  // audio.pause();
+  
   const url = 'animals.json';
 
   // const [remain, setRemain] = useState( 5);
 
   const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [nextActive, setNextActive] = useState(false);
-  const [playerStop, setPlayerStop] = useState(false);
+  // const [playerStop, setPlayerStop] = useState(false);
 
   const [score, setScore] = useState(0);
   const [animalTitle, setAnimalTitle] = useState('*****');
@@ -48,6 +51,10 @@ const App = () => {
   const [categories, setCategories] = useState([]);
   const [animals, setAnimals] = useState([]);
   const [isShow, setIsShow] = useState(true);
+
+  const setPlayerStop = () => {
+    document.querySelector('.rhap_container audio').pause();
+  };
 
   const getCurrentDetail = (id) => {
     const de = animals[currentGroup].animals.find((element, index, array)=>{
@@ -190,7 +197,7 @@ const App = () => {
           return { id, i, name, error: false, success: false };
         }));
 
-        setIsDataLoaded(true);
+        setIsDataLoaded(true); 
       },
       (reason)=> {console.log('rejected ', reason)})
       .catch(e => {
@@ -200,7 +207,7 @@ const App = () => {
   },[]);
 
   if (isDataLoaded) {
-    if (currentGroup > 5) {
+    if ( currentGroup > 5) {
       return (
         <Gra score={score} onBegin={onBegin}/>
       );
@@ -236,8 +243,6 @@ const App = () => {
   }
 
   return <div>...Wait... please for data fetching....</div>;
-
-
 };
 
 export default App;
