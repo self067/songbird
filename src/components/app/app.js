@@ -229,7 +229,7 @@ const App = () => {
               onClickChoice={ onClickChoice }
             />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 d-flex">
             <ChoiceDetail currentDetail={currentDetail} isShow={isShow} />
           </div>
         </div>

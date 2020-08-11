@@ -20,22 +20,22 @@ const ChoiceDetail = ({currentDetail, isShow}) => {
           </div>
         ) : (
           <div>
-          <div className="card-body">
-            <img className="animal-image" src={imgPrefix+image} alt={name}/>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">
-                <h4>{name}</h4>
-              </li>
-              <li className="list-group-item">
-                <span>{species}</span>
-              </li>
-              <li className="list-group-item">
-                <Player mp3src={audioPrefix+audio} playerStop={playerStop}/>
-              </li>
+            <div className="card-body">
+              <img className="animal-image" src={imgPrefix+image} alt={name}/>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
+                  <h4>{name}</h4>
+                </li>
+                <li className="list-group-item">
+                  <span>{species}</span>
+                </li>
+                <li className="list-group-item">
+                  <Player mp3src={audioPrefix+audio} playerStop={playerStop}/>
+                </li>
             </ul>
           </div>
-                      <span className="animal-description">{description}</span>
-                      </div>
+          <span className="animal-description">{description}</span>
+          </div>
 
         )
       }
