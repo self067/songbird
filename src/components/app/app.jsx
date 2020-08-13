@@ -19,8 +19,7 @@ let remain=5;
 const imgPrefix = 'images/quest/';
 // const audioPrefix = 'audio/quest/';
 const audio = new Audio('');
-const playSound = (sound: string) => {
-  // audio.pause();
+const playSound = (sound) => {
   audio.src = `audio/${sound}.mp3`;
   audio.play();
 };

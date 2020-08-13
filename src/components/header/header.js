@@ -8,7 +8,7 @@ const Header = (props) => {
     <div className="header-top-panel">
       <img src={logo} width="200" height="55" alt="" className="logo"/>
       <h5 className="header-score">
-  Score: <span className="span">{score}</span>
+        Score: <span className="span">{score}</span>
       </h5>
     </div>
 

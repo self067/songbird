@@ -23,7 +23,7 @@
 .rhap_container {
   background-color: #303030;
   color: #fff;
-  border-top: 1px solid #555;
+  /* border-top: 1px solid #555; */
   padding: 12px 0;
   box-shadow: none;
 }
