@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import logo from './animalsounds.png';
 
 const Header = (props) => {
   const { score } = props;
