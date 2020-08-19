@@ -1,4 +1,4 @@
-.btn-def {
+button.btn-def {
   width: 100%;
   margin: 5px auto;
   background-color: #303030;
@@ -7,18 +7,18 @@
   /* cursor: auto; */
   transition: .5s;
 }
-.btn-next {
+button.btn-next {
   background-color: #00bc8c;
 }
 
-.btn-next:hover {
+button.btn-next:hover {
   background-color: #00EFB2;
 }
 
 
 @media (max-width: 992px) {
-  .btn-def {
-    margin-top: 20px;
+  button.btn-def {
+    /* margin-top: 20px; */
     margin-bottom: 20px;
   }
 }
@@ -27,5 +27,9 @@
 }
 
 @media (max-width: 570px) {  
+  button.btn-def {
+    margin-bottom: 55px;
+  }
+
 }
 
