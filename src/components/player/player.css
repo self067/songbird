@@ -1,0 +1,68 @@
+.rhap_time {
+  color: #fff;
+  font-size: 11px;
+}
+.rhap_volume-controls {
+  justify-content: center;
+}
+.rhap_volume-container {
+  margin-top: 10px;
+}
+
+/* .rhap_volume-container {
+} */
+
+.rhap_controls-section {
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 0 !important;
+  margin-left: 60px;
+}
+
+
+.rhap_container {
+  background-color: #303030;
+  color: #fff;
+  /* border-top: 1px solid #555; */
+  padding: 12px 0;
+  box-shadow: none;
+}
+
+.rhap_play-pause-button {
+  color:  #303030;
+  border-radius: 50%;
+  /* border: 2px solid rgb(0, 188, 140); */
+  background-color: rgb(0, 188, 140);
+  font-size: 44px;
+}
+
+.rhap_play-pause-button svg {
+  color:  #303030;
+  border-radius: 50%;
+  width: 0.9em;
+  height: 0.9em;
+}
+
+
+
+div.rhap_progress-container {
+  margin: 0 0 0 15px;
+}
+
+div.rhap_progress-filled {
+  background: linear-gradient(to right, rgb(0, 188, 140) 0%, rgb(61, 133, 140) 100%, rgb(115, 115, 115) 100%, rgb(115, 115, 115) 100%);
+}
+div.rhap_volume-bar {
+  background: linear-gradient(to right, rgb(0, 188, 140) 0%, rgb(61, 133, 140) 100%, rgb(115, 115, 115) 100%, rgb(115, 115, 115) 100%);
+}
+
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+} 
+
+@media screen and (max-width: 479px) {
+
+}

@@ -1,0 +1,85 @@
+/************************/
+
+.animal-description {
+  display: flex;
+}
+
+.animal-details {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #444;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.animal-details  .animal-image {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 2rem;
+
+}
+
+.animal-details .list-group-item {
+  padding: .25rem;
+}
+
+.animal-details .list-group-item .term{
+  margin-right: .5rem;
+}
+
+.instruction {
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  /* min-height: 173px; */
+}
+.card { min-height: 173px;}
+
+.card-body .list-group {
+  width: calc(100% - 240px);
+}
+
+.instruction span {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .card-body .list-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {  
+  .animal-details {
+    margin-top: 10px;    
+  }
+  .animal-details .animal-image {
+    margin-right: 2rem;
+  }
+
+}
+
+@media (max-width: 570px) {  
+  .card-body {
+    flex-direction: column;
+  }
+
+  .animal-details .animal-image {
+    margin: 0 auto 10px;
+    width: 160px;
+    height: 124px;
+  }
+  
+  h4,
+  .card-body .list-group-item:nth-child(2) {
+    text-align: center;
+  }
+
+}
